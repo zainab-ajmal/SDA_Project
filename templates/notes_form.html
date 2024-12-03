@@ -1,0 +1,17 @@
+{% extends 'notes_base.html' %}
+
+{% block content %}
+
+<form method='POST'>
+    {% csrf_token %}
+    {{ form.media }}  <!-- required for TinyMCE -->
+    {{ form.as_p }}
+    <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-primary my-5">Submit</button>
+        <a href="{% url 'notes.list' %}" class="btn btn-secondary my-5">Cancel</a>
+    
+    </div>
+</form>
+
+
+{% endblock %}

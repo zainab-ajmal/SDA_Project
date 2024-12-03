@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Library</title>
+    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+</head>
+<body>
+    <header>
+        <h1>PDF Library</h1>
+    </header>
+    <main>
+        <!-- Upload Section -->
+        <section id="upload-section">
+            <h2>Upload a PDF</h2>
+            <form id="upload-form">
+                {% csrf_token %}
+                <form id="upload-form" method="post" enctype="multipart/form-data">
+                <label for="pdf-name">Book Name:</label>
+                <input type="text" id="pdf-name" placeholder="Enter book name" required>
+
+                <label for="pdf-description">Description:</label>
+                <textarea id="pdf-description" placeholder="Enter description" required></textarea>
+
+                <label for="pdf-file">Choose PDF:</label>
+                <input type="file" id="pdf-file" accept="application/pdf" required>
+
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <!-- Search Section -->
+        <section id="search-section">
+            <h2>Search for a Book</h2>
+            <input type="text" id="search-bar" placeholder="Search by book name...">
+            <ul id="search-results"></ul>
+        </section>
+
+        <!-- All Uploaded Books -->
+        <section id="all-books">
+            <h2>All Uploaded Books</h2>
+            <ul id="book-list"></ul> <!-- This will hold the list of books -->
+        </section>
+    </main>
+
+    <script src="{% static 'js/book.js' %}"></script>
+</body>
+</html>

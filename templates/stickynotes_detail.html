@@ -1,0 +1,22 @@
+{% extends "sticky_notes.html" %}
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Note Details</div>
+            <div class="card-body">
+                <h1 class="fs-5">{{ stickynote.title }}</h1>
+                <p>{{stickynote.text }}</p>
+            </div>
+            <div class="card-footer">
+               
+                <a href="{% url 'stickynotes.list' %}" class="btn btn-sm btn-primary">Back</a>
+                <a href="{% url 'stickynotes.update' pk=stickynote.id %}" class="btn btn-sm btn-warning"> Edit</a>
+                <a href="{% url 'stickynotes.delete' pk=stickynote.id%} " class="btn btn-sm btn-danger"> Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

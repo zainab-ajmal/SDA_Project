@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Study Planner</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="content-box">
+            <h1>Welcome to Your Digital Study Planner</h1>
+            <p>
+                Organize your tasks, set reminders, manage your timetable, and stay ahead with our
+                all-in-one digital study companion. Join us to achieve your academic goals effortlessly!
+            </p>
+            <div class="buttons">
+                <a href="/signup/" class="btn">Sign Up</a>
+                <a href="/login/" class="btn">Log In</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

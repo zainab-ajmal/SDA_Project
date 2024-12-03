@@ -1,0 +1,129 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#171616;
+}
+.form-container
+{
+width: 420px;
+color: black;
+background-color: #171616;
+border-radius: 10px;
+}
+.form-container h1
+{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+.form-container .input-box
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 12px 0;
+}
+.input-box .input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(223, 219, 219, 0.226);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input ::placeholder
+{
+    color: white;
+}
+.form-container .remember-box
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    padding: 8px;
+    color: white;
+}
+  .remember-box label input
+{
+    accent-color: #fff;
+    margin-right:4px; margin-top: 15px;
+  
+}
+.remember-box a
+{
+    color: rgb(239, 228, 228);
+    text-decoration: none;
+}
+.remember-box .password{
+    margin-top: 15px;
+    margin-right: 3px;
+}
+.remember-box a:hover
+{
+    text-decoration: underline;
+}
+.form-container .login-btn
+{
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600; 
+    color: #0f0f0f;
+}
+.form-container .register-link
+{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+    color: white;
+  
+}
+.register-link p a
+{
+    color: #ebe7e7;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover
+{
+    text-decoration: underline;
+}
+.img-container 
+{
+    display: flex;
+    justify-content: center;
+    margin-top: -25px;
+}
+.form-container .userimg 
+{
+    height: 70px;
+    width: 70px;  
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white; 
+    padding: 2px; 
+    box-shadow: 0 0 8px rgba(0, 0, 0, .1); 
+}

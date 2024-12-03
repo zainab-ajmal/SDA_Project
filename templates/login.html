@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Login</title>
+    <script>
+        function showError(message) {
+            alert(message);
+        }
+    </script>
+  
+</head>
+<body>
+    
+    <div class="form-container">
+        <div class="img-container">
+            <img src="{% static 'images/user-icon.png' %}" alt="user icon" class="userimg">
+        </div>
+        <h1>Log in</h1>
+        <form method="POST" id="login-form" class="form">
+            {% csrf_token %}
+            <div class="input-box">
+                <input type="text" class="input" name= "username" placeholder="Enter Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input" name="password" placeholder="Password" required>
+            </div>
+            <div class="remember-box">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#" class="password">Forgot Password</a>
+            </div>
+            <button type="submit" class="login-btn">Log in</button>
+            <div class="register-link">
+                <p>Not registered yet? <a href="{% url 'signup' %}">Register</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    {% if error_message %}
+    <script>
+        showError("{{ error_message }}");
+    </script>
+    {% endif %}
+</body>
+</html>
